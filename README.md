@@ -14,7 +14,7 @@ Architecture
 * The controller handles the business logic, prepares the data, and attaches the data to the view model
 * The controller is free to use reusable units such as services and data models
 * Models and services are available through dependency injection
-* One-way data binding from view model to view
+* One-way data binding from view model to view via dirty-checking
 
 
 Backend Rendering

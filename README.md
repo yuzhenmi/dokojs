@@ -15,6 +15,7 @@ Architecture
 * The controller is free to use reusable units such as services and data models
 * Models and services are available through dependency injection
 * One-way data binding from view model to view via dirty-checking
+* For now, digestion of the data binding must be triggered manually
 * Parent component can contribute to the initial state of a child component
 * Components communicate with each other through controller posting and receiving messages through the tree
 * A posted message has minRange and maxRange defined which determines the relative position range in the tree the message is delivered

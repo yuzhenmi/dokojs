@@ -13,7 +13,8 @@ Architecture
 * The view model consists of data (no business logic) which is associated to the view
 * The controller handles the business logic, prepares the data, and attaches the data to the view model
 * The controller is free to use reusable units such as services and data models
-* Dependency handling is compliant with CommonJS
+* Models and services are available through dependency injection
+* One-way data binding from view model to view
 
 
 Backend Rendering

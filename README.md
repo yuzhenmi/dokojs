@@ -34,7 +34,7 @@ There are two additional types to follow DRY principles:
 * Mixin
 
 #### Helper ####
-Helpers contain one or more methods that are free of side-effects. Each layer can have its own helpers, and a helper can be defined as accessible to all layers. Being free of side-effects is the only restriction of helpers. They are usually used to define common requirements shared between members of the same architectural layer. The file naming convention of helpers is to have underscore as prefix (e.g. _colors.js).
+Helpers contain one or more methods that are free of side-effects. Each layer can have its own helpers, and a helper can be defined as accessible to all layers. Being free of side-effects is the only restriction of helpers. They are usually used to define common requirements shared between members of the same architectural layer. The file naming convention of helpers is to have 2 underscores as prefix (e.g. __colors.js).
 
 #### Mixin ####
-Mixins serve similar purpose as helpers in that they both define common requirements shared between members of the same architectural layer. The important differences are that all methods defined in a mixin are instance methods and a single mixin cannot be defined as accessible to all layers. These methods must be mixed into an object before they become accessible. The file naming convention of mixins is to have dash as prefix (e.g. -with-modal.js).
+Mixins serve similar purpose as helpers in that they both define common requirements shared between members of the same architectural layer. The important differences are that all methods defined in a mixin are instance methods and a single mixin cannot be defined as accessible to all layers. These methods must be mixed into an object before they become accessible. The file naming convention of mixins is to have 1 underscore as prefix (e.g. _with-modal.js).

@@ -9,7 +9,7 @@ dokojs is a JavaScript framework for building scalable and maintainable web appl
 Architecture
 ======
 
-There are 4 major layers for an application built with this framework:
+There are 4 major layers:
 ------
 * DataManager
 * Controller

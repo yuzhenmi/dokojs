@@ -28,7 +28,7 @@ Renderers are responsible for setting the state of the DOM. They expose instance
 #### Parser ####
 Parsers are responsible for reading the state of the DOM. They expose instance methods to the controller to retrieve state information. Only parsers are capable of exposing DOM state.
 
-There are two additional types of entities available to follow DRY principles:
+There are two additional types to follow DRY principles:
 ------
 * Helper
 * Mixin

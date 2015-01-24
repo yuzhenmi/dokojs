@@ -20,7 +20,7 @@ There are 4 major layers:
 DataManagers occupy the model layer of MVC. They are objects that provide data access and manipulation through instance methods. Only DataManagers are capable of persisting data and state information beyond a function call.
 
 #### Controller ####
-Controllers are the glue of the application. They are responsible for orchestrating changes in the application in response to events. The only way to communicate to a controller is through events. Usually, each controller is associated with a distinct component within the application.
+Controllers are the glue of the application. They are responsible for orchestrating changes in the application in response to events. The only way to communicate to a controller is through events. Usually, each controller is associated with a distinct component within the application. Each function in the controller should be an event handler that, in response to an event, takes a sequence of actions that may or may not involve a decision tree.
 
 #### Renderer ####
 Renderers are responsible for setting the state of the DOM. They expose instance methods to the controller to manipulate the DOM. Only renderers are capable of changing the DOM state.

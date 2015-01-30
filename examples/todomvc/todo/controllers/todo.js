@@ -11,9 +11,9 @@ doko.controller('todo.controllers.Todo', function TodoController() {
 	var TodoDataManager = require('todo.dataManagers.Todo');
 	var TodoRenderer = require('todo.renderers.Todo');
 
-	var todoParser = new TodoParser(this);
-	var todoDataManager = new TodoDataManager();
-	var todoRenderer = new TodoRenderer(this);
+	var todoParser = TodoParser.createInstance(this);
+	var todoDataManager = TodoDataManager.createInstance();
+	var todoRenderer = TodoRenderer.createInstance(this);
 
 	this.handleKeydownNewTodo = function handleKeyDownNewTodo(event, data) {
 		if (event.which === keyCodes.ENTER) {

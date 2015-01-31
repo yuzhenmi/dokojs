@@ -5,6 +5,8 @@ doko.defineController('todo.controllers.Todo', function TodoController() {
 		'todo': '#todo-list > li',
 		'destroyTodoButton': '#todo-list > li .destroy'
 	});
+	
+	var keyCodes = require('common.helpers.keyCodes');
 
 	var todoParser = doko.useParser('todo.parsers.Todo', this);
 	var todoDataManager = doko.useDataManager('todo.dataManagers.Todo');

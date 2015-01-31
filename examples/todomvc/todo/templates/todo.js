@@ -1,4 +1,4 @@
-doko.template('todo.templates.todo', function todoTemplate() {
+doko.defineTemplate('todo.templates.todo', function todoTemplate() {
 	return
 		'<li>' + 
 			'<div class="view">' + 

@@ -1,4 +1,4 @@
-doko.controller('todo.controllers.Todo', function TodoController() {
+doko.defineController('todo.controllers.Todo', function TodoController() {
 
 	this.selectors({
 		'newTodo': '#new-todo',
@@ -6,14 +6,9 @@ doko.controller('todo.controllers.Todo', function TodoController() {
 		'destroyTodoButton': '#todo-list > li .destroy'
 	});
 
-	var keyCodes = require('common.helpers.keyCodes');
-	var TodoParser = require('todo.parsers.Todo');
-	var TodoDataManager = require('todo.dataManagers.Todo');
-	var TodoRenderer = require('todo.renderers.Todo');
-
-	var todoParser = new TodoParser(this);
-	var todoDataManager = new TodoDataManager();
-	var todoRenderer = new TodoRenderer(this);
+	var todoParser = doko.useParser('todo.parsers.Todo', this);
+	var todoDataManager = doko.useDataManager('todo.dataManagers.Todo');
+	var todoRenderer = doko.useRenderer('todo.renderers.Todo', this);
 
 	this.handleKeydownNewTodo = function handleKeyDownNewTodo(event, data) {
 		if (event.which === keyCodes.ENTER) {

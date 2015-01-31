@@ -1,9 +1,5 @@
-(function() {
-
-	if (window.doko) {
-		return;
-	}
-	var doko = window.doko = {};
+if (!window.doko) {
+	window.doko = {};
 
 	doko.require = function require(path) {
 		path = path || '';
@@ -34,54 +30,5 @@
 		return value;
 	};
 
-	doko.page = function page(page) {
-		// TODO
-	};
-
-	doko.dataModel = function dataModel(path, DataModel) {
-		DataModel.prototype = Object.create(doko.DataModel.prototype);
-		DataModel.prototype.constructor = DataModel;
-		return doko.define(path, DataModel);
-	};
-
-	doko.parser = function parser(path, Parser) {
-		Parser.prototype = Object.create(doko.Parser.prototype);
-		Parser.prototype.constructor = Parser;
-		return doko.define(path, Parser);
-	};
-
-	doko.renderer = function renderer(path, Renderer) {
-		Renderer.prototype = Object.create(doko.Renderer.prototype);
-		Renderer.prototype.constructor = Renderer;
-		return doko.define(path, Renderer);
-	};
-
-	doko.controller = function controller(path, Controller) {
-		Controller.prototype = Object.create(doko.Controller.prototype);
-		Controller.prototype.constructor = Controller;
-		return doko.define(path, Controller);
-	};
-
-	doko.helper = function helper(path, helper) {
-		return doko.define(path, helper);
-	};
-
-	doko.mixin = function mixin(path, Mixin) {
-		Mixin.prototype = Object.create(doko.Mixin.prototype);
-		Mixin.prototype.constructor = Mixin;
-		return doko.define(path, Mixin);
-	};
-
-	doko.mix = function mix() {
-		var dest = arguments[0];
-		if (!dest) {
-			throw new Error('doko.mix: Invalid mixin destination.');
-		}
-		var mixins = [];
-		for (var n = 1, nn = arguments.length; n < nn; n++) {
-			mixins.push(arguments[n]);
-		}
-		// TODO
-	};
-
-})();
+	doko.debugMode = false;
+}

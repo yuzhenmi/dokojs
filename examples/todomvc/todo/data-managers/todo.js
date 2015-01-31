@@ -1,4 +1,4 @@
-doko.dataManager('todo.dataManagers.Todo', function TodoDataManager() {
+doko.defineDataManager('todo.dataManagers.Todo', function TodoDataManager() {
 
 	this.todos = [];
 

@@ -1,5 +1,7 @@
-doko.helper('common.helpers.keyCodes', function keyCodes() {
+doko.defineHelper('common.helpers.keyCodes', function keyCodes() {
 
-	this.ENTER = 13;
+	return {
+		ENTER: 13
+	};
 
 });

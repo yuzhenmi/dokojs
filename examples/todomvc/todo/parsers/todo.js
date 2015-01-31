@@ -1,4 +1,4 @@
-doko.parser('todo.parsers.Todo', function TodoParser() {
+doko.defineParser('todo.parsers.Todo', function TodoParser() {
 
 	this.selectors({
 		'newTodo': '#new-todo'
